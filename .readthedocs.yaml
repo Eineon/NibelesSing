@@ -1,0 +1,26 @@
+# Read the Docs 配置文件，用于 Sphinx 项目
+# 详情请参阅 https://docs.readthedocs.io/en/stable/config-file/v2.html
+
+# 必需
+version: 2
+
+# 设置操作系统、Python 版本和其他可能需要的工具
+build:
+  os: "ubuntu-22.04"
+  tools:
+    python: "latest"
+
+# 使用 Sphinx 在 "docs/" 目录中构建文档
+sphinx:
+  configuration: docs/source/conf.py
+  # builder: "html"
+  # 在所有警告时失败构建
+  fail_on_warning: false
+
+formats: all
+
+# 可选但推荐，声明构建文档所需的 Python 依赖项
+# 详情请参阅 https://docs.readthedocs.io/en/stable/guides/reproducible-builds.html
+python:
+  install:
+    - requirements: requirements.txt

@@ -1,0 +1,194 @@
+body {
+  --color-highlight-vertical: linear-gradient(0deg,
+      color-mix(in srgb, var(--color-brand-primary), transparent 25%) 00%,
+      transparent 75%);
+  --color-highlight-horizontal: linear-gradient(90deg,
+      color-mix(in srgb, var(--color-brand-primary), transparent 25%) 00%,
+      transparent 95%);
+  --sd-color-primary: var(--color-brand-primary);
+  --sd-color-primary-highlight: var(--color-background-item);
+  --sd-color-secondary: var(--color-brand-content);
+  --sd-color-secondary-highlight: var(--color-background-item);
+}
+
+body[data-theme=light] {
+  --color-theme-primary: white;
+  --color-theme-secondary: black;
+}
+
+body:not([data-theme=light]) {
+  --color-theme-primary: black;
+  --color-theme-secondary: white;
+}
+
+@font-face {
+  font-family: "Sarasa Fixed SC";
+  src: url('fonts/SarasaFixedSC-Regular.ttf') format('truetype');
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  border-bottom: 2px solid;
+}
+
+:target>h1:first-of-type,
+:target>h2:first-of-type,
+:target>h3:first-of-type,
+:target>h4:first-of-type,
+:target>h5:first-of-type,
+:target>h6:first-of-type,
+span:target~h1:first-of-type,
+span:target~h2:first-of-type,
+span:target~h3:first-of-type,
+span:target~h4:first-of-type,
+span:target~h5:first-of-type,
+span:target~h6:first-of-type {
+  background: var(--color-highlight-vertical);
+  border-bottom: 2px solid var(--color-brand-primary);
+}
+
+p {
+  font-size: 14px;
+  line-height: 2;
+  margin-top: .75em;
+  margin-bottom: .75em;
+}
+
+[class*=admonition] {
+  overflow: visible;
+}
+
+.admonition p.admonition-title,
+p.topic-title {
+  font-weight: bold;
+}
+
+table.docutils {
+  margin-left: 0;
+}
+
+table.docutils td {
+  background-color: none;
+}
+
+table.docutils tbody tr {
+  background-color: transparent;
+  transition: background-color .08s ease;
+}
+
+table.docutils tbody tr:hover {
+  background-color: color-mix(in srgb, var(--color-theme-secondary), transparent 96%);
+}
+
+tr td:first-child,
+tr th:first-child {
+    white-space: nowrap;
+}
+
+a.sd-outline-primary,
+a.sd-outline-secondary {
+  transition: color .4s ease, background-color .4s ease;
+}
+
+a.sd-outline-primary:focus,
+a.sd-outline-primary:hover {
+  border-color: var(--sd-color-primary) !important;
+  background-color: var(--sd-color-primary) !important;
+}
+
+a.sd-outline-secondary:focus,
+a.sd-outline-secondary:hover {
+  border-color: var(--sd-color-secondary) !important;
+  background-color: var(--sd-color-secondary) !important;
+}
+
+a {
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.annot {
+  position: relative;
+  white-space: nowrap;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.annot .up-note {
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 11px;
+  line-height: 0;
+}
+
+.form {
+  font-family: 'Sarasa Fixed SC', 'consolas', monospace, georgia, serif, sans-serif;
+  font-size: .95em;
+  color: var(--color-brand-primary);
+  white-space: nowrap;
+}
+
+.word {
+  color: var(--color-brand-word);
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.word.extra {
+  font-size: 15px;
+}
+
+.symbol {
+  font-family: 'times new roman', times, georgia, serif, sans-serif;
+  font-size: 1.05em;
+}
+
+.hint {
+  cursor: help;
+}
+
+.sidebar-brand-text {
+  text-align: center;
+}
+
+.admonition-title {
+  white-space: nowrap;
+}
+
+a.sd-badge span.std.std-ref {
+  font-size: 1.1em;
+  font-weight: normal;
+}
+
+.str {
+  color: #E54B4B;
+}
+
+.dex {
+  color: #2DC96B;
+}
+
+.int {
+  color: #3A86FF;
+}
+
+.str, .dex, .int {
+  font-weight: bold;
+  white-space: nowrap;
+  text-shadow:
+   -1px -1px 0 white,
+    1px -1px 0 white,
+   -1px  1px 0 white,
+    1px  1px 0 white;
+}
+
+.arabic.simple {
+  margin-top: 0;
+  margin-bottom: 0;
+}

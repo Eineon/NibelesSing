@@ -1,0 +1,15 @@
+# ------解析器--------
+# myst-parser
+myst-nb
+
+# ------主题--------
+furo
+
+# ------插件--------
+linkify-it-py
+sphinxcontrib-mermaid
+sphinx-design
+sphinx-design-elements
+sphinx_togglebutton
+sphinx-copybutton
+sphinx-tippy
