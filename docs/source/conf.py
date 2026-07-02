@@ -180,14 +180,14 @@ master_doc = "index"
 # -- Project information
 
 language = "zh_CN"
-project = "银雾止颂"
+project = "CODEX: RS"
 version = release = "Nibelessing"
 now = datetime.datetime.now()
-copyright = f"2026-{now.year}, Eineon"
+copyright = f"2025-{now.year}, Eineon"
 author = "ネオン様"
 
 # -- Options for HTML output
-html_title = "银雾止颂"
+html_title = "CODEX: RS"
 # html_logo = "_nibel/.png"
 # html_favicon = "_nibel/.svg"
 html_static_path = ["_nibel"]
@@ -260,7 +260,7 @@ html_theme_options = {
 }
 
 # -- Options for HTMLHelp output
-htmlhelp_basename = "银雾止颂"
+htmlhelp_basename = "CODEX: RS"
 
 # -- Options for EPUB output
 epub_show_urls = "footnote"

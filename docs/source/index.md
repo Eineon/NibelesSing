@@ -1,4 +1,4 @@
-# 银雾止颂
+# CODEX: RS
 
 专用空白卡：https://www.kdocs.cn/l/cu32ar495WiN
 
