@@ -1,4 +1,4 @@
-# 通典：复音
+# 通典：复颂
 
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-blue.svg)][cc-link]
 [![D&D Compatible](https://img.shields.io/badge/D%26D-Compatible-blue.svg)][srd-link]
