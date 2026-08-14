@@ -30,19 +30,19 @@ GRID_SIZE = {
 
 CARD_RULES = [
     {
-        "key": re.compile(r"【(sign):([^】:]+):?([^】]*)】"),
+        "key": re.compile(r"【sign:([^】:]+):?([^】]*)】"),
         "value": [" {hyper}`", "{type=badge,color=secondary,outline=true}` "],
     },
     {
-        "key": re.compile(r"【(cell):([^】:]+):?([^】]*)】"),
+        "key": re.compile(r"【cell:([^】:]+):?([^】]*)】"),
+        "value": ["『{hyper}`", "`』"],
+    },
+    {
+        "key": re.compile(r"【word:([^】:]+):?([^】]*)】"),
         "value": ["{hyper}`", "`"],
     },
     {
-        "key": re.compile(r"【(word):([^】:]+):?([^】]*)】"),
-        "value": ["{hyper}`", "`"],
-    },
-    {
-        "key": re.compile(r"【(term):([^】:]+):?([^】]*)】"),
+        "key": re.compile(r"【term:([^】:]+):?([^】]*)】"),
         "value": ["{term}`", "`"],
     },
 ]
@@ -79,11 +79,9 @@ def process_content(source):
 
     for rule in CARD_RULES:
         def card_rep(m, r=rule):
-            t0, t1, t2 = m.groups()
+            t1, t2 = m.groups()
             part = r["value"]
-            brL = "『" if t0 == "cell" else ""
-            brR = "』" if t0 == "cell" else ""
-            return f"{part[0]}{brL}{t2.replace('@', t1) if t2 else t1}{brR} <{t1}>{part[1]}"
+            return f"{part[0]}{t2.replace('@', t1) if t2 else t1} <{t1}>{part[1]}"
         content = rule["key"].sub(card_rep, content)
 
     for rule in NODE_RULES:
