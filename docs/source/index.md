@@ -6,6 +6,7 @@
 :maxdepth: 2
 
 MAIN
+ITEMS
 FEATS
 ARTS
 SPELLS
